@@ -48,10 +48,10 @@ const state = proxy({
     { position: [0, 0.09, 0.15], name: "Chest Center (Upper)" },
     { position: [0, 0, 0.15], name: "Chest Center (Middle)" },
   ],
-  decals: ["react", "three2"],
+  decals: ["react", "three2", "mark"],
   scale: 5000,
-  color: "#353934",
-  decal: "three2",
+  color: "#F5F5F5",
+  decal: "mark",
   position: [0, 0.09, 0.15],
   image: "",
 });

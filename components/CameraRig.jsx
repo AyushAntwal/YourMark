@@ -4,6 +4,7 @@ import { easing } from "maath";
 import React, { useRef } from "react";
 import { useSnapshot } from "valtio";
 import state from "@/store/store";
+import * as THREE from "three";
 import {
   AccumulativeShadows,
   Decal,
@@ -39,16 +40,18 @@ function CameraRig({ children, rotation = true }) {
   return <group ref={group}>{children}</group>;
 }
 
-function Backdrop() {
-  const shadows = useRef();
-  useFrame((state, delta) =>
-    easing.dampC(
-      shadows.current.getMesh().material.color,
-      state.color,
-      0.5,
-      delta
-    )
-  );
+function Backdrop({ color = new THREE.Color("#ffffff") }) {
+  const shadows = useRef(null);
+
+  useFrame((_, delta) => {
+    if (!shadows.current) return;
+
+    const mesh = shadows.current.getMesh?.();
+    if (!mesh) return;
+
+    easing.dampC(mesh.material.color, color, 0.5, delta);
+  });
+
   return (
     <AccumulativeShadows
       ref={shadows}
@@ -77,9 +80,31 @@ function Backdrop() {
   );
 }
 
+function FrontLight() {
+  const snap = useSnapshot(state);
+  return (
+    <>
+      {/* Main front light */}
+      <directionalLight
+        position={[0, 4, 2.5]}
+        intensity={2.75}
+        color={snap.color}
+        castShadow
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+      />
+
+      {/* Soft fill light */}
+      <ambientLight intensity={0.35} />
+    </>
+  );
+}
+
 function Shirt(props) {
   const snap = useSnapshot(state);
-  const texture = useTexture(snap.image ? snap.image : `images/${snap.decal}.png`);
+  const texture = useTexture(
+    snap.image ? snap.image : `images/${snap.decal}.png`
+  );
   const textureWidth = texture?.image?.width;
   const textureHeight = texture?.image?.height;
 
@@ -113,6 +138,6 @@ function Shirt(props) {
 }
 
 useGLTF.preload("/glb/shirt_baked_collapsed.glb");
-["/images/react.png"].forEach(useTexture.preload);
+["/images/mark.png"].forEach(useTexture.preload);
 
-export { CameraRig, Shirt, Backdrop };
+export { CameraRig, Shirt, Backdrop, FrontLight };

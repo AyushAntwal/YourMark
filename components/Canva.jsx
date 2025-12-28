@@ -2,7 +2,7 @@
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Center, Environment } from "@react-three/drei";
-import { CameraRig, Backdrop, Shirt } from "./CameraRig";
+import { CameraRig, Backdrop, Shirt, FrontLight } from "./CameraRig";
 
 function Canva({ position = [0, 0, 0], fov = 20, element, rotation = true }) {
   const rootElement = document?.getElementById(element);

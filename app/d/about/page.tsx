@@ -4,32 +4,35 @@ export default function AboutPage() {
       <div className="max-w-4xl w-full space-y-10 mt-5 mb-20">
         {/* Title Card */}
         <section className="px-2">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="text-gray-600">Yourmark</span>
-          </h1>
-          <p className="text-md leading-relaxed">
-            <strong>YourMark</strong> is where ideas turn into identity. We
-            believe what you wear should speak for you — not just follow trends.
-          </p>
+          <div className="mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold border-b border-gray-700 inline">
+              About <strong className="text-gray-600">Yourmark</strong>
+            </h1>
+          </div>
+
           <p>
-            With YourMark, you can customize premium T-shirts using your own
-            logo, artwork, or design. Every detail is in your control, from
-            placement to scale, so the final piece feels truly personal. We
-            focus on high-quality fabrics, sharp prints, and a smooth
-            customization experience that lets creativity come first. Whether
-            you’re building a brand, expressing yourself, or creating something
-            meaningful, YourMark gives you the freedom to make it yours.
+            we believe clothing should speak your story. We create
+            premium custom T-shirts that let you design, personalize, and wear
+            your identity with confidence.
           </p>
 
-          <div className="my-4 divider"></div>
-          {/* Story */}
-          <p className="section-text">
-            Yourmark was born from a simple idea: customization should be easy,
-            beautiful, and personal. We wanted to remove complexity and give
-            people full creative control without needing design skills.
+          <p>
+            Whether it’s your brand logo, artwork, message, or a personal
+            memory, YourMark gives you complete freedom to customize your
+            T-shirt exactly the way you want. From fabric quality to print
+            precision, every detail is crafted to deliver comfort, durability,
+            and style.
           </p>
-          <h2 className="section-title font-semibold">
-            YourMark — Make it Yours.
+
+          <p>
+            Our easy-to-use customization tools help you visualize your design
+            in real time, so what you imagine is exactly what you receive. No
+            compromises. No generic designs. Just your mark, your way.
+          </p>
+
+          <h2>
+            Because fashion isn’t about fitting in — it’s about{" "}
+            <strong>Make it Yours</strong>.
           </h2>
         </section>
 
@@ -54,7 +57,7 @@ export default function AboutPage() {
         </section>
 
         {/* Closing */}
-        <section className="px-2 border border-yellow-300/30">
+        <section className="px-2">
           <p className="text-lg font-medium">
             Yourmark isn’t just a product —
             <span className="text-gray-800">
@@ -94,39 +97,46 @@ export default function AboutPage() {
         {/* Contact */}
         <section className="px-2 mt-6">
           <h2 className="text-lg font-semibold mb-3">Contact</h2>
-
-          <ul className="space-y-2 text-sm">
+          <ul className="space-x-3 flex text-sm">
             <li className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-gray-600">
-                mail
-              </span>
               <a
                 href="mailto:ayush@example.com"
                 className="hover:underline text-blue-600"
+                target="_blank"
               >
-                ayush@example.com
+                <img
+                  src="/icons/mail.png"
+                  style={{ objectFit: "fill", height: "30px" }}
+                  loading="lazy"
+                />
               </a>
             </li>
 
             <li className="flex items-center gap-2">
-              {/* <LinkedIn fontSize="small" className="text-gray-600" /> */}
               <a
-                href="https://www.linkedin.com/in/ayush"
+                href="https://www.linkedin.com/in/ayush-antiwal08/"
                 target="_blank"
                 className="hover:underline text-blue-600"
               >
-                linkedin.com/in/ayush
+                <img
+                  src="/icons/linkedin.png"
+                  style={{ objectFit: "fill", height: "30px" }}
+                  loading="lazy"
+                />
               </a>
             </li>
 
             <li className="flex items-center gap-2">
-              {/* <GitHub fontSize="small" className="text-gray-600" /> */}
               <a
-                href="https://github.com/ayush"
+                href="https://github.com/AyushAntwal"
                 target="_blank"
                 className="hover:underline text-blue-600"
               >
-                github.com/ayush
+                <img
+                  src="/icons/github.png"
+                  style={{ objectFit: "fill", height: "30px" }}
+                  loading="lazy"
+                />
               </a>
             </li>
           </ul>

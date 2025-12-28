@@ -7,13 +7,18 @@ function Header() {
         <div className="relative w-full text-black">
           <div className="absolute w-[200px] bg-white -top-[1.9rem] -right-[4rem] h-4"></div>
           <div className="absolute w-4 bg-white -end-[6rem] -left-[2.75rem] h-[100px]"></div>
-          <h1 className="sm:text-xl md:text-xl lg:text-1xl text-nowrap font-bold ">
-            Yourmark
-          </h1>
-          <div className="w-full h-[1px] bg-black"></div>
-          <p className="sm:text-xs md:text-xs lg:text-sm text-nowrap text-center text-black/60">
-            Make It Yours
-          </p>
+          <div className="flex gap-1 justify-center items-center">
+            <img
+              src="/images/mark.png"
+              style={{ objectFit: "fill", height: "30px" }}
+              loading="lazy"
+            />
+            <div>
+              <h1 className="sm:text-xl md:text-xl lg:text-1xl text-nowrap font-bold ">
+                Yourmark
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex justify-between w-full bg-transparent items-center px-3">
@@ -34,13 +39,14 @@ function Header() {
 
         <div className="flex gap-3">
           <Link
-            href={"/"}
-            className="rounded-xl  sm:w-full group text-md flex items-center bg-yellow-300 hover:bg-white  shadow-white text-black font-bold text-center px-4 py-2"
+            href={"https://www.ayushantiwal.in/"}
+            className="rounded-xl  sm:w-full group text-md flex items-center bg-slate-300-300 hover:bg-white  shadow-white text-black font-bold text-center px-4 py-2"
           >
-            About
-            <span className="material-symbols-outlined pl-2 group-hover:scale-110 group-hover:-translate-y-1 group-hover:translate-x-1 duration-300 ">
-              deployed_code_account
-            </span>
+            <img
+              src="/icons/connect.png"
+              className=" object-fill h-6 ml-1"
+              loading="lazy"
+            />
           </Link>
         </div>
       </div>

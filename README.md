@@ -1,37 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# About Yourmark
 
-## Getting Started
+**YourMark** is where ideas turn into identity. We believe what you wear should speak for you — not just follow trends.
 
-First, run the development server:
+With YourMark, you can customize premium T-shirts using your own logo, artwork, or design. Every detail is in your control, from placement to scale, so the final piece feels truly personal. We focus on high-quality fabrics, sharp prints, and a smooth customization experience that lets creativity come first. Whether you’re building a brand, expressing yourself, or creating something meaningful, YourMark gives you the freedom to make it yours.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Yourmark was born from a simple idea: customization should be easy, beautiful, and personal. We wanted to remove complexity and give people full creative control without needing design skills.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## YourMark — Make it Yours.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## What We Do
 
-To learn more about Next.js, take a look at the following resources:
+- Visual, real-time customization tools
+- Premium materials & long-lasting prints
+- Built for individuals, creators, and brands
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Our Promise
 
-## Deploy on Vercel
+- Made uniquely for you
+- Quality-first craftsmanship
+- Smooth and intuitive experience
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# threejs-e-com
+**Yourmark isn’t just a product — it’s your identity, your creativity, your mark.**
+
+---
+
+# About Me
+
+Hi, I’m **Ayush** — a **Full-Stack Web Developer** specializing in crafting refined, high-performance web experiences where design precision meets robust engineering. I work extensively with **React**, **Next.js**, and **TypeScript**, building interfaces that are not only visually elegant but also scalable, maintainable, and optimized for performance.
+
+This project explores the intersection of creativity and technology, featuring immersive interactions and carefully composed 3D visuals powered by **Three.js**, designed to elevate user engagement without compromising usability.
+
+---
+
+## Contact
+
+- 📧 **Email:** [ayushantiwal08@gmail.com](mailto:ayush@example.com)
+- 💼 **LinkedIn:** [linkedin.com/in/ayush-antiwal08](https://www.linkedin.com/in/ayush-antiwal08/)
+- 🐙 **GitHub:** [github.com/AyushAntwal](https://github.com/ayush)

@@ -6,14 +6,33 @@ import { useSnapshot } from "valtio";
 function MainContainer({ children }: { children: React.ReactNode }) {
   const snap = useSnapshot(state);
   return (
-    <Suspense fallback={<main>Loading...</main>}>
-      <main className="p-3 lg:p-6 flex  h-screen">
+    <Suspense
+      fallback={
+        <main className="h-screen w-screen flex justify-center items-center">
+          <div className="loader"></div>
+        </main>
+      }
+    >
+      <main className="p-3 md:p-6 flex  h-screen">
         <div
           className="container-bg flex flex-col mx-auto rounded-3xl flex-1 w-full"
           style={{
-            backgroundImage: `radial-gradient(circle, white  5%, ${
-              snap.color === "#eee" ? "whitesmoke" : snap.color
-            } 300%)`,
+            backgroundImage: `
+    radial-gradient(
+      circle,
+      white 10%,
+      color-mix(in srgb, ${
+        ["#F5F5F5", "#FFFFFF", "#EDE6D6"].includes(snap.color)
+          ? "#B0B0B0"
+          : snap.color
+      } 40%, white) 75%,
+      color-mix(in srgb, ${
+        ["#F5F5F5", "#FFFFFF", "#EDE6D6"].includes(snap.color)
+          ? "#B0B0B0"
+          : snap.color
+      } 90%, black) 120%
+    )
+  `,
           }}
         >
           <Header />

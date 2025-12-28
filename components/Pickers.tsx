@@ -33,16 +33,18 @@ function ImagePickers() {
   return (
     <div className="flex gap-6 mx-2 my-4">
       {state.decals.map((decal) => (
-        <img
-          key={decal}
-          src={`/images/${decal}.png`}
-          alt={decal}
-          className="h-[50px]"
-          onClick={() => {
-            state.decal = decal;
-            state.image = "";
-          }}
-        />
+        <div className=" cursor-pointer">
+          <img
+            key={decal}
+            src={`/images/${decal}.png`}
+            alt={decal}
+            className="h-[50px]"
+            onClick={() => {
+              state.decal = decal;
+              state.image = "";
+            }}
+          />
+        </div>
       ))}
       <button
         className="h-[50px] w-[50px] border flex justify-center items-center bg-slate-300 rounded-full border-y-gray-700 border-x-gray-100"
