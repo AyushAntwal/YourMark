@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 const Canvas = dynamic(() => import("@/components/Canva"), { ssr: false });
+
 import {
   ColorPicker,
   ImagePickers,

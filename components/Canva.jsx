@@ -6,15 +6,7 @@ import { Center, Environment } from "@react-three/drei";
 import { CameraRig, Backdrop, Shirt } from "./CameraRig";
 
 function Canva({ position = [0, 0, 0], fov = 20, element, rotation = true }) {
-  const [rootElement, setRootElement] =
-    (useState < HTMLElement) | (null > null);
-
-  useEffect(() => {
-    if (element) {
-      setRootElement(document.getElementById(element));
-    }
-  }, [element]);
-  
+  const rootElement = document?.getElementById(element);
   return (
     <Suspense
       fallback={
