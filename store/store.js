@@ -50,7 +50,7 @@ const state = proxy({
   ],
   decals: ["react", "three2", "mark"],
   scale: 5000,
-  color: "#F5F5F5",
+  color: "#483D8B",
   decal: "mark",
   position: [0, 0.09, 0.15],
   image: "",

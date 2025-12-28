@@ -10,6 +10,7 @@ import {
   Decal,
   RandomizedLight,
   useGLTF,
+  useHelper,
   useTexture,
 } from "@react-three/drei";
 
@@ -82,20 +83,24 @@ function Backdrop({ color = new THREE.Color("#ffffff") }) {
 
 function FrontLight() {
   const snap = useSnapshot(state);
+  const lightColor = new THREE.Color(snap.color).lerp(
+    new THREE.Color("#eee"),
+    0.9
+  );
   return (
     <>
       {/* Main front light */}
       <directionalLight
-        position={[0, 4, 2.5]}
-        intensity={2.75}
-        color={snap.color}
+        position={[0, 10, 5]}
+        intensity={0.5}
+        color={lightColor}
         castShadow
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
 
       {/* Soft fill light */}
-      <ambientLight intensity={0.35} />
+      <ambientLight intensity={0.25} />
     </>
   );
 }
