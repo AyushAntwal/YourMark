@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const Canva = dynamic(() => import("@/components/Canva"), { ssr: false });
+const Canvas = dynamic(() => import("@/components/Canva"), { ssr: false });
 import {
   ColorPicker,
   ImagePickers,
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="absolute z-10 bottom-0  right-5">
           <ColorPicker />
         </div>
-        <Canva position={[0, 0, 0]} rotation fov={20} element="root" />
+        <Canvas position={[0, 0, 0]} rotation fov={20} element="root" />
         <div className="absolute z-10 bottom-0 left-5">
           <ImagePickers />
         </div>

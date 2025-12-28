@@ -1,3 +1,5 @@
+'use client'
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen px-6 flex justify-center">

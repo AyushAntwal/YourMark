@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CameraRig.jsx", "components/Canva.jsx", "app/d/layout.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CameraRig.jsx", "components/Canva.jsx", "app/d/layout.tsx"],
   "exclude": ["node_modules"]
 }

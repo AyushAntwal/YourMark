@@ -16,6 +16,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "YourMark",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description:
     "we believe clothing should speak your story. We create premium custom T-shirts that let you design, personalize, and wear your identity with confidence.",
 };
