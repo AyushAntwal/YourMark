@@ -1,7 +1,12 @@
 import React from "react";
 import dynamic from "next/dynamic";
 const Canva = dynamic(() => import("@/components/Canva"), { ssr: false });
-import { ColorPicker, ImagePickers, ImagePosition, SizeSlider } from "@/components/Pickers";
+import {
+  ColorPicker,
+  ImagePickers,
+  ImagePosition,
+  SizeSlider,
+} from "@/components/Pickers";
 export default function Home() {
   return (
     <div className="flex flex-col h-full p-4 items-center justify-center">
@@ -9,14 +14,14 @@ export default function Home() {
         <div className="absolute z-10 bottom-0  right-5">
           <ColorPicker />
         </div>
-        <Canva />
+        <Canva position={[0, 0, 0]} rotation fov={20} element="root" />
         <div className="absolute z-10 bottom-0 left-5">
           <ImagePickers />
         </div>
         <div className="absolute z-10 top-0 left-5">
           <ImagePosition />
         </div>
-        <div className="absolute z-10 top-16 left-5">
+        <div className="absolute z-10 top-56 left-5">
           <SizeSlider />
         </div>
       </div>
