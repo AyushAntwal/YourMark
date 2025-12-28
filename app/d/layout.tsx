@@ -1,5 +1,6 @@
 'use client'
 import React, { useRef } from "react";
+import dynamic from "next/dynamic";
 const Canvas = dynamic(() => import("@/components/Canva"), { ssr: false });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
